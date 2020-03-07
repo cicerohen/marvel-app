@@ -1,0 +1,24 @@
+@mixin button-base() {
+  cursor: pointer;
+  text-transform: uppercase;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 5px;
+  padding: 0.8em 1.2em;
+  font-size: map-get($button-sizes, default);
+  margin: 0.2rem;
+}
+
+@mixin button-style($bg-color: $button-bg-color, $color: $button-color) {
+  background-color: $bg-color;
+  border-color: darken($bg-color, 5);
+  color: $color;
+  &:hover {
+    background-color: darken($bg-color, 4);
+  }
+}
+
+@mixin title-base() {
+  text-transform: uppercase;
+}

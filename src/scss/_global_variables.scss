@@ -1,0 +1,29 @@
+$defaultPadding: 15px;
+
+$gray-lighter-color: #f5f5f5;
+$darker-color: #202020;
+$red-color: #e62429;
+
+$palette: (
+  primary: $red-color,
+  secondary: #767676,
+  success: #3adb76,
+  warning: #ffae00
+);
+
+$footer-bg-color: $darker-color;
+
+$loader-overlay: rgba(#fff, 0.9);
+
+$list-border-color: $gray-lighter-color;
+
+$sidebar-bg-color: $gray-lighter-color;
+
+$button-bg-color: $gray-lighter-color;
+$button-color: $darker-color;
+
+$button-sizes: (
+  small: 0.75rem,
+  default: 0.9rem,
+  large: 1.25rem
+);
