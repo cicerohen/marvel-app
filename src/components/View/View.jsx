@@ -11,7 +11,7 @@ const View = ({
   sidebarIsOpen,
   onOpenSidebar,
   onCloseSidebar,
-  children
+  children,
 }) => {
   return (
     <div className="view">

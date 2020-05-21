@@ -6,7 +6,7 @@ const List = ({ showLoading = true, height, children, className }) => {
   const classes = classNames({
     "list-wrapper": true,
     "list--scrollable": !!height,
-    "list--is-loading": showLoading
+    "list--is-loading": showLoading,
   });
 
   return (

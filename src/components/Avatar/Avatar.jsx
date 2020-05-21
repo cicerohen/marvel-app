@@ -9,4 +9,4 @@ const Avatar = ({ url, name }) => {
   );
 };
 
-export default Avatar;
+export default React.memo(Avatar);

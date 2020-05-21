@@ -7,7 +7,7 @@ import FavoriteButtonContainer from "../buttons/FavoriteButtonContainer";
 import { useCharactersContext } from "../../contexts/Characters";
 import { useCharacterDetailsModalContext } from "../../contexts/CharacterDetailsModal";
 
-const favoriteButtonRender = character => {
+const favoriteButtonRender = (character) => {
   return <FavoriteButtonContainer id={character.id} />;
 };
 
@@ -16,8 +16,8 @@ const CharactersListContainer = ({ isFetching }) => {
   const { setIsOpen, setCharacter } = useCharacterDetailsModalContext();
 
   const onShowDetails = React.useCallback(
-    selectedCharacter => {
-      const character = characters.find(character => {
+    (selectedCharacter) => {
+      const character = characters.find((character) => {
         return character.id === selectedCharacter.id;
       });
       if (character) {

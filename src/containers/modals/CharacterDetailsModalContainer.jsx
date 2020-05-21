@@ -12,9 +12,9 @@ import { CharacterProvider } from "../../contexts/Character";
 const CharacterDetailsModalContainer = () => {
   const { isOpen, setIsOpen, character } = useCharacterDetailsModalContext();
 
-  const onClose = React.useCallback(() => {
+  const onClose = () => {
     setIsOpen(false);
-  }, [setIsOpen]);
+  };
 
   return (
     <CharacterProvider character={character}>

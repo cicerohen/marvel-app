@@ -6,26 +6,23 @@ import { useUserContext } from "../../contexts/User";
 const FavoriteButtonContainer = ({ id }) => {
   const { favoriteCharacters, setFavoriteCharacters } = useUserContext();
 
-  const isFavorited = React.useMemo(() => {
-    return !!favoriteCharacters[id];
-  }, [favoriteCharacters, id]);
+  const isFavorited = !!favoriteCharacters[id];
 
-  const favoriteCharacter = React.useCallback(() => {
+  const favoriteCharacter = () => {
     setFavoriteCharacters({
       ...favoriteCharacters,
       [id]: {
-        id: id
-      }
+        id: id,
+      },
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [setFavoriteCharacters, favoriteCharacters, id]);
+  };
 
-  const unfavoriteCharacter = React.useCallback(() => {
+  const unfavoriteCharacter = () => {
     const newfavoriteCharacters = Object.keys(favoriteCharacters).reduce(
       (acc, key) => {
         if (Number(key) !== Number(id)) {
           acc[key] = {
-            id: key
+            id: key,
           };
         }
         return acc;
@@ -33,16 +30,15 @@ const FavoriteButtonContainer = ({ id }) => {
       {}
     );
     setFavoriteCharacters(newfavoriteCharacters);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [setFavoriteCharacters, favoriteCharacters, id]);
+  };
 
-  const favoriteToggle = React.useCallback(() => {
+  const favoriteToggle = () => {
     if (isFavorited) {
       unfavoriteCharacter();
     } else {
       favoriteCharacter();
     }
-  }, [isFavorited, favoriteCharacter, unfavoriteCharacter]);
+  };
 
   return (
     <Buttom

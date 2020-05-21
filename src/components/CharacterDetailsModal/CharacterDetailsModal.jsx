@@ -11,7 +11,7 @@ const CharacterDetailsModal = ({
   characterSeriesList,
   characterStoriesList,
   characterEventsList,
-  character = {}
+  character = {},
 }) => {
   const avatarUrl =
     (character.thumbnail &&

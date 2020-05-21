@@ -2,16 +2,16 @@ import React from "react";
 import View from "../components/View";
 import { useViewContext } from "../contexts/View";
 
-const ViewContainer = props => {
+const ViewContainer = (props) => {
   const { sidebarIsOpen, setSidebarIsOpen } = useViewContext();
 
-  const onOpenSidebar = React.useCallback(() => {
+  const onOpenSidebar = () => {
     setSidebarIsOpen(true);
-  }, [setSidebarIsOpen]);
+  };
 
-  const onCloseSidebar = React.useCallback(() => {
+  const onCloseSidebar = () => {
     setSidebarIsOpen(false);
-  }, [setSidebarIsOpen]);
+  };
 
   return (
     <View

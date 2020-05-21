@@ -6,10 +6,10 @@ const Title = ({ title, level, palette, tag = "h1", className }) => {
   const classes = classNames({
     title: true,
     [`title--${level}`]: level,
-    [`title--${palette}`]: palette
+    [`title--${palette}`]: palette,
   });
 
   return <Tag className={`${className} ${classes}`}>{title}</Tag>;
 };
 
-export default Title;
+export default React.memo(Title);

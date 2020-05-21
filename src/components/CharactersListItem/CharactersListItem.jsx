@@ -8,13 +8,13 @@ const CharactersListItem = ({
   name,
   description,
   onShowDetails,
-  favoriteButtonRender
+  favoriteButtonRender,
 }) => {
-  const onShowDetailsHandler = React.useCallback(() => {
+  const onShowDetailsHandler = () => {
     if (onShowDetails) {
       onShowDetails({ id, name, description });
     }
-  }, [onShowDetails, id, name, description]);
+  };
 
   return (
     <ListItem
