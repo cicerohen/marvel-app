@@ -1,6 +1,6 @@
 ## Marvel App
 
-Um simples app que consome a API da Marvel
+Um simples app ilustrativo que consome a API da Marvel
 
 [[demo]](https://cicerohen-marvel-app.surge.sh/)
 
