@@ -1,6 +1,6 @@
-## Treinamento React.js
+## Marvel App
 
-Este código é parte do **"Treinamento React.js"** produzido pelas comunidades front-end do Ceará
+Um simples app que consome a API da Marvel
 
 ### Dependências
 
